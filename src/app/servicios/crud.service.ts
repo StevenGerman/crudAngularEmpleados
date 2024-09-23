@@ -19,6 +19,9 @@ export class CrudService {
     return this.clienteHttp.post(this.API+"?insertar=1",datosEmpleado);
   }
 
+  ObtenerEmpleados(){
+    return this.clienteHttp.get(this.API);
+  }
 
 
 }
