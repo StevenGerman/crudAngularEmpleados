@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AgregarEmpleadoComponent } from './components/agregar-empleado/agregar-empleado.component';
 import { EditarEmpleadoComponent } from './components/editar-empleado/editar-empleado.component';
-import { ListarEmpleadoComponent } from './components/listar-empleado/listar-empleado.component';
+import { ListarEmpleadoComponent } from './components/listar-libro/listar-empleado.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';

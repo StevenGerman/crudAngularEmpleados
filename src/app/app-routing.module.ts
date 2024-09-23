@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AgregarEmpleadoComponent } from './components/agregar-empleado/agregar-empleado.component';
 import { EditarEmpleadoComponent } from './components/editar-empleado/editar-empleado.component';
-import { ListarEmpleadoComponent} from './components/listar-empleado/listar-empleado.component';
+import { ListarEmpleadoComponent} from './components/listar-libro/listar-empleado.component';
 
 
 const routes: Routes = [
