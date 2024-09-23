@@ -7,6 +7,10 @@ import { AgregarEmpleadoComponent } from './components/agregar-empleado/agregar-
 import { EditarEmpleadoComponent } from './components/editar-empleado/editar-empleado.component';
 import { ListarEmpleadoComponent } from './components/listar-empleado/listar-empleado.component';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +20,10 @@ import { ListarEmpleadoComponent } from './components/listar-empleado/listar-emp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
