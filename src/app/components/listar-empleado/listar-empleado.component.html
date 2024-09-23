@@ -1,34 +1,40 @@
-<div class="card">
-    <div class="card-header">Empleados</div>
-    <div class="card-body">
-        
-        <div
-            class="table-responsive"
-        >
-            <table
-                class="table table-primary"
-            >
-                <thead>
-                    <tr>
-                        <th scope="col">id</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Correo</th>
-                        <th>Acciones</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="">
-                        <td scope="row">0</td>
-                        <td>German</td>
-                        <td>germangmail.com</td>
-                        <td> 
-                            <a routerLink="/editar-empleado/1">Editar</a>  | Borrar</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </div>
-        
+<div class="card mt-3">
+  <div class="card-header">Empleados</div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-primary">
+        <thead>
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of Empleados; let iControl = index">
+            <td scope="row">{{ empleado.id }}</td>
+            <td>{{ empleado.nombre }}</td>
+            <td>{{ empleado.correo }}</td>
+            <td>
+              <a
+                class="btn btn-warning"
+                routerLink="/editar-empleado/{{ empleado.id }}"
+                >Editar</a
+              >
+
+              |
+
+              <a
+                class="btn btn-danger"
+                role="button"
+                (click)="borrarRegistro(empleado.id, iControl)"
+                >Borrar</a
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    
+  </div>
 </div>
