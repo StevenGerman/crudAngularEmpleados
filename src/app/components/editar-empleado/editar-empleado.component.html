@@ -3,15 +3,14 @@
     <div class="card-header">Editar Empleado</div>
     <div class="card-body">
         
-        <form action="">
+        <form [formGroup]="formularioEmpleados" (ngSubmit)="enviarDatos()">
 
             <div class="mb-3">
                 <label for="" class="form-label">Nombre:</label>
                 <input
                     type="text"
                     class="form-control"
-                    name=""
-                    id=""
+                    formControlName="nombre"
                     placeholder="Escribe tu nombre"
                 />
             </div>
@@ -21,20 +20,20 @@
                 <input
                     type="email"
                     class="form-control"
-                    name=""
-                    id=""
+                    formControlName="correo"
                     placeholder=""
                 />
             </div>
 
             <div class="btn-group" role="group" aria-label="">
                 <button
-                    type="button"
+                    type="submit"
                     class="btn btn-success"
                 >
-                    Agregar
+                    Guardar
                 </button>
                 <button
+                routerLink="/listar-empleado"
                     type="button"
                     class="btn btn-primary"
                 >

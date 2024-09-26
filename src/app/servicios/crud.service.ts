@@ -11,7 +11,7 @@ import { Empleado } from './Empleado.model';
 
 export class CrudService {
 
-  API: string = 'https://escuelasagarna.com/APIBiblioteca/libros.php';
+  API: string = 'http://localhost/empleados/';
 
   constructor(private clienteHttp:HttpClient) { }
 
@@ -29,6 +29,10 @@ export class CrudService {
 
   ObtenerEmpleados(){
     return this.clienteHttp.get(this.API);
+  }
+
+  EditarEmpleado(idEmpleado:any,datosEmpleado:Empleado):Observable<any>{
+    return this.clienteHttp.post(this.API+"?actualizar="+idEmpleado,datosEmpleado);
   }
 
 

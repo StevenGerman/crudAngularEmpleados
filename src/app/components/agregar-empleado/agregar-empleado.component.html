@@ -1,6 +1,7 @@
 <div class="card mt-3">
-  <div class="card-header">Agregar</div>
+  <div class="card-header"><h2>Agregar Empleado</h2></div>
   <div class="card-body">
+    
     <form [formGroup]="formularioEmpleados"  (ngSubmit)="enviarDatos()">
       <div class="mb-3">
         <label for="" class="form-label">Nombre:</label>
@@ -21,7 +22,7 @@
 
       <div class="btn-group" role="group" aria-label="">
         <button type="submit" class="btn btn-success">Agregar</button>
-        <button type="button" class="btn btn-primary">Cancelar</button>
+        <button type="button" routerLink="/listar-empleado" class="btn btn-primary">Cancelar</button>
       </div>
     </form>
   </div>
