@@ -32,9 +32,11 @@ export class AgregarEmpleadoComponent implements OnInit{
   enviarDatos():any{ 
     
     console.log(this.formularioEmpleados.value);
-    this.servicioEmpleado.AgregarEmpleado(this.formularioEmpleados.value).subscribe();
+    this.servicioEmpleado.AgregarEmpleado(this.formularioEmpleados.value).subscribe((respuesta) => {
+      this.ruteador.navigateByUrl('/listar-empleado');
+    });
 
-    this.ruteador.navigateByUrl('/listar-empleado');
+    
   }
 
 
